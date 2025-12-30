@@ -1,8 +1,7 @@
 <script setup>
 import { RouterLink } from "vue-router";
 import { defineProps } from "vue";
-import ContactList from "./ContactList.vue";
-import EditContact from "./EditContact.vue";
+
 const props = defineProps({
   title: String,
   required: true,
@@ -11,7 +10,7 @@ const props = defineProps({
 <template>
   <div>
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-      <a class="navbar-brand" href="#">{{ props.title }}</a>
+      <RouterLink class="navbar-brand" to="/">{{ props.title }}</RouterLink>
       <button
         class="navbar-toggler"
         type="button"
